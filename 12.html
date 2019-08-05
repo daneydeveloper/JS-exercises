@@ -1,0 +1,24 @@
+<!-- Crie dois botões no HTML chamados: 'Verde', ,'Vermelho'. ao clicar neles, o style="background-color: {COR-SELECIONADA}" vai ser alterado dinamicamente -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="verde()" id="verde" value="VERDE">
+    <input type="button" onclick="vermelho()" id="vermelho" value="VERMELHO">
+    
+    <script>
+        function verde(){
+            document.body.style.background = 'green'
+        }
+
+        function vermelho(){
+            document.body.style.background = 'red'
+        }
+    </script>
+</body>
+</html>

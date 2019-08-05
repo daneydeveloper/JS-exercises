@@ -1,0 +1,30 @@
+<!-- (21) Crie uma função que calcula 5% de desconto retornando o valor do desconto -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Valor total: <input type="number" id="total">
+    <input type="button" name="calcula" onclick="calcula(total)" value="Calcular desconto.">
+    <div id="result"></div>
+    <script>
+        function calcula(total) {
+            
+            if (!total.value){
+                window.alert('Digite o total!')
+            }
+            else {
+                var t = Number(total.value)
+                var r = t*0.95
+                document.getElementById('result').innerHTML = `Valor da compra com 5% de desconto: ${r.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+                window.alert(`Valor da compra com 5% de desconto: ${r.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+            }
+        }
+    </script>
+</body>
+</html>

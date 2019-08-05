@@ -1,0 +1,33 @@
+<!-- (19) Crie uma função que retorna a palavra (impar/par) de acordo com seu parâmetro inteiro. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="num" id="num">
+    <input type="button" onclick="calcula(num)" value="Par/ Impar">
+    <div id="result" style="padding: 10px;"></div>
+    
+    <script>
+        function calcula(num){
+            if (!num.value) {
+                window.alert('Digite um valor!')
+            }
+            else {
+                var n = num.value
+                if (n%2 == 0){
+                    document.getElementById('result').innerHTML = 'Par'
+                }
+                else {
+                    document.getElementById('result').innerHTML = 'Impar'
+                }
+            }
+        }
+    </script>
+</body>
+</html>

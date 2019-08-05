@@ -1,0 +1,33 @@
+<!-- (9) Preencha um CPF com pontuação <input maxlength="14" id="cpfPoint" /> e no campo ao lado exiba sem pontuação. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="CPF">CPF</label>
+    <input type="text" maxlength="14" id="cpfPoint" placeholder="CPF">
+    <input type="button" value="Verificar" onclick="check(cpfPoint)">
+    <div style="padding-top: 10px;" id="result">
+
+    </div>
+
+    <script>
+        function check(cpfPoint){
+            var cpf = cpfPoint.value
+            var result = document.getElementById('result')
+
+            cpf = cpf.split(".") //separa as string onde tinha .
+            cpf = cpf.join('') //une todas as string em uma só novamente
+            cpf = cpf.split("-") //separa a string onde tinha -
+            
+            result.innerHTML = `Resultado sem digitos: ${cpf.join('')}`
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- (7a) Faça 2 campos no HTML chamados: 'Nome', 'Sobrenome' e um botão 'Saudação'; ao clicar no botão exibir um alert: 'Olá {NOME} {SOBRENOME}' -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="sobrenome" placeholder="Sobrenome">
+    <button onclick="saudar(nome, sobrenome)" >Saudação</button>
+</body>
+<script>
+    function saudar(nome, sobrenome){
+        window.alert(`Olá ${nome.value} ${sobrenome.value}`)
+    }
+</script>
+</html>

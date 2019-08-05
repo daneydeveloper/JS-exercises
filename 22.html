@@ -1,0 +1,41 @@
+<!-- (22) Crie uma função que recebe o ano de nascimento da pessoa informando se ela é maior de idade ou menor. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Digite seu ano de nascimento: <input type="number" name="nasc" id="nasc">
+    <input type="button" name="calcula" onclick="calcula(nasc)" value="Calcular">
+
+    <script>
+        function calcula(nasc) {
+            if(!nasc.value){
+                window.alert('Digite o ano de nascimento!')
+            }
+            else {
+                var nasc = Number(nasc.value)
+                if (nasc < 1900 || nasc > 2019){
+                    window.alert('Você digitou um ano inválido!')
+                }
+                else {
+                    var data = new Date()
+                    var ano = data.getFullYear()
+                    var idade = ano - nasc
+                    
+                    if (idade < 18) {
+                        window.alert('Você é menor de idade')
+                    }
+                    else {
+                        window.alert('Você é maior de idade')
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
